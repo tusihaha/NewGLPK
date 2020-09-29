@@ -1,132 +1,77 @@
 GLPSOL: GLPK LP/MIP Solver, v4.57
 Parameter(s) specified in the command line:
- --model problem.mod
-Reading model section from problem.mod...
-Reading data section from problem.mod...
-152 lines were read
+ --model gen.mod
+Reading model section from gen.mod...
+Reading data section from gen.mod...
+gen.mod:24858: warning: final NL missing before end of file
+24858 lines were read
 Generating first...
 Generating second...
 Generating third...
-Generating four...
-Generating five...
-Generating six...
-Generating seven...
-Generating eight...
+Generating cr1...
+Generating cr2...
+Generating cr3...
+Generating cr4...
+Generating cr5...
+Generating cr6...
+Generating cr7...
+Generating cr8...
+Generating cr9...
+Generating cr10...
+Generating cr11...
+Generating cr12...
+Generating cr13...
+Generating cr14...
+Generating cr15...
+Generating cr16...
+Generating cr17...
+Generating cr18...
+Generating cr20...
+Generating cr21...
+Generating cr22...
+Generating cr23...
+Generating ct0...
+Generating ct1...
+Generating ct2...
+Generating ct3...
+Generating ct4...
+Generating ct5...
+Generating ct6...
+Generating ct7...
+Generating ct8...
+Generating ct9...
+Generating ct10...
+Generating ct11...
+Generating ct12...
+Generating ct13...
+Generating ct14...
+Generating ct15...
 Generating obj...
 Model has been successfully generated
 GLPK Integer Optimizer, v4.57
-26 rows, 90 columns, 447 non-zeros
-90 integer variables, all of which are binary
+1289 rows, 576000 columns, 2731680 non-zeros
+576000 integer variables, all of which are binary
 Preprocessing...
-17 rows, 24 columns, 69 non-zeros
-24 integer variables, all of which are binary
+1220 rows, 236640 columns, 709920 non-zeros
+236640 integer variables, all of which are binary
 Scaling...
  A: min|aij| =  1.000e+00  max|aij| =  1.000e+00  ratio =  1.000e+00
 Problem data seem to be well scaled
 Constructing initial basis...
-Size of triangular part is 17
+Size of triangular part is 1220
 Solving LP relaxation...
 GLPK Simplex Optimizer, v4.57
-17 rows, 24 columns, 69 non-zeros
-      0: obj =   1.500000000e+01 inf =   5.000e+00 (4)
-      7: obj =   1.100000000e+01 inf =   0.000e+00 (0)
-*    15: obj =   9.000000000e+00 inf =   0.000e+00 (0)
+1220 rows, 236640 columns, 709920 non-zeros
+      0: obj =   1.500000000e+03 inf =   9.500e+01 (5)
+    179: obj =   6.850000000e+02 inf =   0.000e+00 (0)
+*   500: obj =   1.050000000e+02 inf =   7.504e-16 (8326) 2
+*   529: obj =   1.040000000e+02 inf =   1.526e-14 (0)
 OPTIMAL LP SOLUTION FOUND
 Integer optimization begins...
-+    15: mip =     not found yet >=              -inf        (1; 0)
-+    15: >>>>>   9.000000000e+00 >=   9.000000000e+00   0.0% (1; 0)
-+    15: mip =   9.000000000e+00 >=     tree is empty   0.0% (0; 1)
++   529: mip =     not found yet >=              -inf        (1; 0)
++   529: >>>>>   1.040000000e+02 >=   1.040000000e+02   0.0% (1; 0)
++   529: mip =   1.040000000e+02 >=     tree is empty   0.0% (0; 1)
 INTEGER OPTIMAL SOLUTION FOUND
-Time used:   0.0 secs
-Memory used: 0.3 Mb (280808 bytes)
-result: a 1 1 A 0
-result: a 1 2 A 0
-result: a 1 3 A 0
-result: a 1 1 B 1
-result: a 1 2 B 0
-result: a 1 3 B 0
-result: a 1 1 C 0
-result: a 1 2 C 0
-result: a 1 3 C 0
-result: a 2 1 A 0
-result: a 2 2 A 0
-result: a 2 3 A 0
-result: a 2 1 B 0
-result: a 2 2 B 0
-result: a 2 3 B 0
-result: a 2 1 C 0
-result: a 2 2 C 0
-result: a 2 3 C 0
-result: b 1 1 A 0
-result: b 1 2 A 0
-result: b 1 3 A 0
-result: b 1 1 B 0
-result: b 1 2 B 1
-result: b 1 3 B 0
-result: b 1 1 C 0
-result: b 1 2 C 0
-result: b 1 3 C 0
-result: b 2 1 A 0
-result: b 2 2 A 0
-result: b 2 3 A 0
-result: b 2 1 B 0
-result: b 2 2 B 0
-result: b 2 3 B 0
-result: b 2 1 C 0
-result: b 2 2 C 0
-result: b 2 3 C 0
-result: c 1 1 A 0
-result: c 1 2 A 0
-result: c 1 3 A 0
-result: c 1 1 B 0
-result: c 1 2 B 0
-result: c 1 3 B 0
-result: c 1 1 C 0
-result: c 1 2 C 0
-result: c 1 3 C 0
-result: c 2 1 A 0
-result: c 2 2 A 1
-result: c 2 3 A 0
-result: c 2 1 B 0
-result: c 2 2 B 0
-result: c 2 3 B 0
-result: c 2 1 C 0
-result: c 2 2 C 0
-result: c 2 3 C 0
-result: d 1 1 A 0
-result: d 1 2 A 0
-result: d 1 3 A 0
-result: d 1 1 B 0
-result: d 1 2 B 0
-result: d 1 3 B 0
-result: d 1 1 C 0
-result: d 1 2 C 0
-result: d 1 3 C 1
-result: d 2 1 A 0
-result: d 2 2 A 0
-result: d 2 3 A 0
-result: d 2 1 B 0
-result: d 2 2 B 0
-result: d 2 3 B 0
-result: d 2 1 C 0
-result: d 2 2 C 0
-result: d 2 3 C 0
-result: e 1 1 A 0
-result: e 1 2 A 0
-result: e 1 3 A 0
-result: e 1 1 B 0
-result: e 1 2 B 0
-result: e 1 3 B 0
-result: e 1 1 C 0
-result: e 1 2 C 0
-result: e 1 3 C 0
-result: e 2 1 A 1
-result: e 2 2 A 0
-result: e 2 3 A 0
-result: e 2 1 B 0
-result: e 2 2 B 0
-result: e 2 3 B 0
-result: e 2 1 C 0
-result: e 2 2 C 0
-result: e 2 3 C 0
+Time used:   7.5 secs
+Memory used: 874.7 Mb (917142476 bytes)
 Model has been successfully processed

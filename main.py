@@ -1,5 +1,5 @@
 import os
-os.system("glpsol --model problem.mod > result.txt")
+os.system("glpsol --model gen.mod > result.txt")
 
 file = open("result.txt", "r")
 
