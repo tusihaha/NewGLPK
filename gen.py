@@ -28,10 +28,10 @@ def gen():
 	f = open('gen.mod', 'a')
 	f.write('set I;\n/* set of courses */\nset J;\n/* set of rooms */\nset T;\n/* set of teachers */\nset K;\n/* set of time slots */\n')
 
-	courses = 50
-	rooms = 24
-	teachers = 16
-	timeslots = 30
+	courses = 24
+	rooms = 30
+	teachers = 15
+	timeslots = 5
 
 	t_excepted = gen_except(teachers, courses)
 	r_excepted = gen_except(rooms, courses)
@@ -53,7 +53,9 @@ def gen():
 			f.write('s.t. ct' + str(i) + ': sum{i in ET' + str(i) + ', j in T' + str(i) + ', t in T, k in K} x[i,j,t,k] = 0;\n\n')
 
 	f.write('minimize obj: sum{i in I, j in J, t in T, k in K} cost[i,j,t,k] * x[i,j,t,k];\n/* the objective is to find a cheapest assignment */\n\nsolve;\n\n')
-	# f.write('printf {i in I, j in J, t in T, k in K} \'result: %s %s %s %s %s\', i, j, k, t, x[i,j,t,k];\n\n')
+	
+	f.write('printf {i in I, j in J, t in T, k in K: x[i,j,t,k] = 1} \'result: %s\\n\', k;\n\n')
+
 	f.write('data;\n\n')
 
 	f.write('set I :=')

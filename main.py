@@ -13,6 +13,6 @@ result = []
 
 for line in lines:
 	c = line.split(" ")
-	if c[0] == "result:" and c[5] == '1\n':
-		print(line)
+	#if c[0] == "result:" and c[5] == '1\n':
+	#	print(line)
 			
