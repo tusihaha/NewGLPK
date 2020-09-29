@@ -3,8 +3,8 @@ Parameter(s) specified in the command line:
  --model gen.mod
 Reading model section from gen.mod...
 Reading data section from gen.mod...
-gen.mod:2291: warning: final NL missing before end of file
-2291 lines were read
+gen.mod:2309: warning: some text detected beyond end statement; text ignored
+2309 lines were read
 Generating first...
 Generating second...
 Generating third...
@@ -13,6 +13,7 @@ Generating cr1...
 Generating cr2...
 Generating cr3...
 Generating cr4...
+Generating cr5...
 Generating cr6...
 Generating cr7...
 Generating cr8...
@@ -44,6 +45,7 @@ Generating ct4...
 Generating ct5...
 Generating ct6...
 Generating ct7...
+Generating ct8...
 Generating ct9...
 Generating ct10...
 Generating ct11...
@@ -53,38 +55,32 @@ Generating ct14...
 Generating obj...
 Model has been successfully generated
 GLPK Integer Optimizer, v4.57
-292 rows, 54000 columns, 256875 non-zeros
+294 rows, 54000 columns, 250275 non-zeros
 54000 integer variables, all of which are binary
 Preprocessing...
-229 rows, 20925 columns, 62775 non-zeros
-20925 integer variables, all of which are binary
+239 rows, 25425 columns, 76275 non-zeros
+25425 integer variables, all of which are binary
 Scaling...
  A: min|aij| =  1.000e+00  max|aij| =  1.000e+00  ratio =  1.000e+00
 Problem data seem to be well scaled
 Constructing initial basis...
-Size of triangular part is 229
+Size of triangular part is 239
 Solving LP relaxation...
 GLPK Simplex Optimizer, v4.57
-229 rows, 20925 columns, 62775 non-zeros
-      0: obj =   1.200000000e+02 inf =   4.500e+01 (2)
-     83: obj =   7.100000000e+01 inf =   0.000e+00 (0)
-*   186: obj =   3.300000000e+01 inf =   3.793e-15 (0)
+239 rows, 25425 columns, 76275 non-zeros
+      0: obj =   1.200000000e+02 inf =   4.000e+01 (5)
+     81: obj =   7.200000000e+01 inf =   0.000e+00 (0)
+*   181: obj =   3.300000000e+01 inf =   8.290e-15 (0)
 OPTIMAL LP SOLUTION FOUND
 Integer optimization begins...
-+   186: mip =     not found yet >=              -inf        (1; 0)
-+   186: >>>>>   3.300000000e+01 >=   3.300000000e+01   0.0% (1; 0)
-+   186: mip =   3.300000000e+01 >=     tree is empty   0.0% (0; 1)
++   181: mip =     not found yet >=              -inf        (1; 0)
++   436: >>>>>   3.300000000e+01 >=   3.300000000e+01   0.0% (33; 0)
++   436: mip =   3.300000000e+01 >=     tree is empty   0.0% (0; 65)
 INTEGER OPTIMAL SOLUTION FOUND
-Time used:   0.6 secs
-Memory used: 82.3 Mb (86307964 bytes)
+Time used:   2.2 secs
+Memory used: 82.4 Mb (86414372 bytes)
 result: 0
 result: 1
-result: 1
-result: 0
-result: 0
-result: 0
-result: 1
-result: 0
 result: 1
 result: 0
 result: 0
@@ -93,12 +89,18 @@ result: 0
 result: 0
 result: 0
 result: 0
+result: 1
+result: 0
+result: 0
+result: 1
+result: 0
 result: 0
 result: 1
 result: 1
 result: 0
-result: 1
+result: 0
+result: 0
 result: 0
 result: 1
-result: 0
+result: 1
 Model has been successfully processed

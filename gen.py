@@ -1,4 +1,5 @@
 import random
+import json
 
 def gen_except(resources, courses):
 	result = dict()
@@ -22,6 +23,8 @@ def gen_except(resources, courses):
 		for j in range(courses):
 			if j not in result[i]:
 				except_result[i].append(j)
+	f = open('gen.txt', 'w')
+	f.write(json.dumps(result))
 	return except_result
 
 def gen():
